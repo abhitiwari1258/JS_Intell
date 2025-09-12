@@ -6,12 +6,14 @@
 //     alert("Hay")
 // };
 
+// ****** Click events ************
 // to select every button
 let button = document.querySelectorAll('button')
 
 for(btns of button){
     btns.onclick = function(){
         console.log("Clicked");
-        
     }
 }
+
+
