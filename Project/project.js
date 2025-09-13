@@ -4,10 +4,11 @@ let h2 = document.querySelector("h2");
 
 
 btn.addEventListener("click",()=>{
-    console.log("button clicked")
-    console.log(randomColor());
-    div.style.backgroundColor = randomColor();
-    h2.textContent = randomColor();
+    // console.log("button clicked")
+    // console.log(randomColor());
+    let randomColorVar = randomColor();
+    div.style.backgroundColor = randomColorVar;
+    h2.textContent = randomColorVar;
     
 })
 
