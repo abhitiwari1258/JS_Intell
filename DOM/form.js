@@ -10,6 +10,4 @@ form.addEventListener("submit",function(event){
     console.log(`User Name is : ${userName.value}`);
     console.log(`User password is : ${userPassword.value}`);
     
-    
-    
 })
