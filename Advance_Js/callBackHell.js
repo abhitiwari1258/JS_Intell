@@ -25,3 +25,38 @@ changeColor("red",1000,()=>{
         })
     })
 })
+
+
+  // CalBack Hell
+function saveData(data,success,failure){
+  let netSpeed = Math.floor(Math.random()*10)+1;
+  console.log(netSpeed);
+  
+
+  if(netSpeed > 4){
+    // console.log(`${netSpeed}G Fast Neteork`);
+    success()
+  }else{
+    // console.log(`${netSpeed}G Slow Network `);
+    failure()
+  }
+}
+
+saveData("abhishek",
+  ()=>{
+    console.log(`5G Fast Neteork`);
+
+    saveData("sachin",
+      ()=>{
+        console.log(`5G Fast Neteork`);
+      
+      },
+      ()=>{
+        console.log(`4G Slow Network `);
+      }
+    )
+  },
+  ()=>{
+    console.log(`4G Slow Network `);
+  }
+)
