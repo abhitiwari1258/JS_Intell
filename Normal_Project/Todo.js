@@ -6,11 +6,24 @@ const delAll = document.querySelector(".delAll")
 btn.addEventListener("click",(event)=>{
     event.preventDefault()
 
+    let todoValue = input.value.trim()   // ignore empty task
+    if (todoValue === "") return; 
+
     // creating list item in ul
     let listOfTask = document.createElement("li")
+    listOfTask.style.listStyleType = "none";
     task.appendChild(listOfTask)
-    listOfTask.textContent = input.value
     input.value = " "
+
+     // create checkbox
+    let checkBox = document.createElement("input")
+    checkBox.type = "checkbox"
+    listOfTask.appendChild(checkBox)
+
+
+    let taskText = document.createElement("span")
+    taskText.textContent = todoValue
+    listOfTask.appendChild(taskText)
 
     // creating remove list button
     let listOfButton = document.createElement("button")
@@ -22,9 +35,20 @@ btn.addEventListener("click",(event)=>{
         listOfTask.remove();
     })
 
-    // delete all list item at onc click
-    delAll.addEventListener("click",()=>{
-        task.remove()
+    checkBox.addEventListener("click",()=>{
+        if(checkBox.checked){
+            taskText.style.textDecoration = "line-through"
+            taskText.style.color = "green"
+        }else{
+             taskText.style.textDecoration  = "none"
+             taskText.style.color = "red"
+        }
     })
 
 })
+
+ // delete all list item at one click
+    delAll.addEventListener("click",()=>{
+        // task.remove()
+        task.innerHTML = ""
+    })
