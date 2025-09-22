@@ -103,3 +103,13 @@ li button {
 li button:hover {
     background: #c9302c;
 }
+
+.task li:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.task li input[type="checkbox"] {
+  cursor: pointer;
+  transform: scale(1.2);
+}
