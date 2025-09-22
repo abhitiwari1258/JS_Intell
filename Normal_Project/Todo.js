@@ -24,6 +24,15 @@ btn.addEventListener("click",(event)=>{
     let taskText = document.createElement("span")
     taskText.textContent = todoValue
     listOfTask.appendChild(taskText)
+    
+
+    let today = new Date();
+    let taskDateTime = today.toLocaleString()
+
+    let dateAndTime = document.createElement("small")
+    dateAndTime.textContent = `${taskDateTime}`
+    dateAndTime.style.color = "#ff9800"
+    listOfTask.appendChild(dateAndTime);
 
     // creating remove list button
     let listOfButton = document.createElement("button")
@@ -50,5 +59,13 @@ btn.addEventListener("click",(event)=>{
  // delete all list item at one click
     delAll.addEventListener("click",()=>{
         // task.remove()
+        if(task.children.length === 0){
+            alert("No Task to Delete")
+            return;
+        }
+
+        // confirm() is a built-in browser function that shows a pop-up dialog box with OK and Cancel buttons
+        if(confirm("Are you sure you want to delete all tasks?")){
         task.innerHTML = ""
+        }
     })
