@@ -20,13 +20,13 @@ btn.addEventListener("click",(event)=>{
     checkBox.type = "checkbox"
     listOfTask.appendChild(checkBox)
 
-
+    // all list item
     let taskText = document.createElement("span")
     taskText.textContent = todoValue
     listOfTask.appendChild(taskText)
     
 
-    let today = new Date();
+    let today = new Date();   // adding date and time of task
     let taskDateTime = today.toLocaleString()
 
     let dateAndTime = document.createElement("small")
