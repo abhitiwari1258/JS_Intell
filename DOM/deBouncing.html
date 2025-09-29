@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="search">
+    <div id="output"></div>
+    <script>
+        let timer;
+        let input = document.querySelector("input")
+        let output = document.querySelector("div") 
+        input.addEventListener("keydown",()=>{
+            clearTimeout(timer)
+            timer = setTimeout(()=>{
+                let inpVal = input.value
+                output.innerText = inpVal
+            },1000)
+        })
+
+        // deBouncing always talk about pause 
+        // when pause key then event trigger
+        // eg -> amazon -> search Bar
+    </script>
+</body>
+</html>

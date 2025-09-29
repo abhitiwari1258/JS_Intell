@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="search">
+    <div id="output"></div>
+    <script>
+        let lastExecTime = 0;
+        let throttlingDelay = 2000
+
+        let inp = document.querySelector("input")
+        inp.addEventListener("keydown",()=>{
+            let currNow = Date.now()
+            
+            if(currNow - lastExecTime > throttlingDelay){    
+                let inpVal = inp.value
+                output.innerText = inpVal
+                lastExecTime = currNow
+            }
+        })
+        // opposit of deBouncing
+        // in particular time the event trigger
+
+        // Diff bw deBouncing and Throttling
+
+        // in deBouncing -> when u pause/stop pressing key after 1 sec event fire
+        // but in throttling -> u pause button or continously press the button the event fire after 1 sec it cant wait for any thing
+        
+    </script>
+</body>
+</html>
