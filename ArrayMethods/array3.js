@@ -26,7 +26,7 @@ arr1.forEach((el)=>{
 })
 
 // Map -> create a new array by applying a fxn to each elm of an existing elm
-
+let arr = [1,2,3,4,5];
 let el = arr.map((item,idx)=>{
     console.log(item,idx);
     return item*2;
@@ -57,7 +57,8 @@ console.log(array2);
 
 // reduce -> combine all elm of array and make it into single vlaue
 
+let newA = [2,4,6,8];
 let array3 = newA.reduce((total,item,idx)=>{
     return total+=item;
-})
+})// her we provide initial value which is bydefault 0
 console.log(array3);
