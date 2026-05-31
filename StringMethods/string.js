@@ -71,6 +71,33 @@ console.log(str5.repeat(5));
 
 console.log(str5.length);
 
+// subStr -> extract subString from given string
+// it takes starting index and length of the character
+
+const myText = "my name is abhishek"
+// const text = myText.substr(3,4)
+// console.log(text)
+
+console.log(myText.substr(11,8))
+console.log(myText.substr(-8,8))
+console.log(myText.substr(-8,-8)) // empty
+console.log(myText.substr(-3)) // hek
+console.log(myText.substr(11,-16))  // empty
+
+console.log(myText.substr(11)) 
 
 
+// subString -> index , 0index s 7 tk
+console.log(myText.substring(3,7)) 
 
+// startsWith -> return boolean, jo val diya h wha s start h y nhi
+
+const myText = "my name is abhishek"
+console.log(myText.startsWith("my"))
+console.log(myText.startsWith("My"))
+
+console.log(myText.startsWith("name"))
+console.log(myText.startsWith("name",3)) // give 3 start from 3 index
+
+// endWith
+console.log(myText.endsWith("abhishek"))
